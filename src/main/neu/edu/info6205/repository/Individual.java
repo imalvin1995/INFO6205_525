@@ -1,5 +1,7 @@
 package neu.edu.info6205.repository;
 
+import java.util.List;
+
 public interface Individual {
 
     int [] getChromosome();
@@ -8,6 +10,8 @@ public interface Individual {
     int getGene(int offset);
     void setFitness(double fitness);
     double getFitness();
+    void setRoute(List<int[]> route);
+    List<int[]> getRoute();
 
 
 

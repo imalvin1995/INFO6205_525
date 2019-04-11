@@ -40,7 +40,7 @@ public class GeneticAlgorithmImpl implements GeneticAlgorithm {
         individual.setFitness(fitness);
 
 //        // Store Route in individual
-//        ((Individual) individual).setRoute(robot.getWay());
+        individual.setRoute(robot.getRoute());
 
         return fitness;
     }

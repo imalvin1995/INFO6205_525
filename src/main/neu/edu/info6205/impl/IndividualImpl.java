@@ -2,10 +2,14 @@ package neu.edu.info6205.impl;
 
 import neu.edu.info6205.repository.Individual;
 
+import java.util.List;
+
 public class IndividualImpl implements Individual {
 
     private int[] chromosome;
     private double fitness = -1;
+    private List<int[]> route;
+
 
     public IndividualImpl(int[] chromosome){
         this.chromosome=chromosome;
@@ -51,6 +55,17 @@ public class IndividualImpl implements Individual {
     public double getFitness() {
         return this.fitness;
     }
+
+    @Override
+    public void setRoute(List<int[]> route) {
+        this.route = route;
+    }
+
+    @Override
+    public List<int[]> getRoute() {
+        return route;
+    }
+
     public String toString() {
         String output = "";
         for (int gene = 0; gene < this.chromosome.length; gene++) {
