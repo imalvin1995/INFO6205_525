@@ -2,7 +2,7 @@
 
 ## Team Information
 
-| Name | NEU ID | Email Address |
+| Name | NUID | Email Address |
 | --- | --- | --- |
 |Tse-Hsi Lin |001475828|lin.tse@husky.neu.edu |
 |Yu-Chiao Huang |001442969 |huang.yuc@husky.neu.edu |
