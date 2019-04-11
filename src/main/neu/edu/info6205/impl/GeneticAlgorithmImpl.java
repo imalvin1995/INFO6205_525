@@ -1,9 +1,6 @@
 package neu.edu.info6205.impl;
 
-import neu.edu.info6205.repository.GeneticAlgorithm;
-import neu.edu.info6205.repository.Individual;
-import neu.edu.info6205.repository.Maze;
-import neu.edu.info6205.repository.Population;
+import neu.edu.info6205.repository.*;
 
 public class GeneticAlgorithmImpl implements GeneticAlgorithm {
 
@@ -35,7 +32,7 @@ public class GeneticAlgorithmImpl implements GeneticAlgorithm {
         int[] chromosome = individual.getChromosome();
 
         // Get fitness
-        Robot robot = new Robot(chromosome, maze, 100);
+        Robot robot = new RobotImpl(chromosome, maze, 100);
         robot.run();
         int fitness = maze.scoreRoute(robot.getRoute());
 

@@ -1,10 +1,11 @@
 package neu.edu.info6205.impl;
 
 import neu.edu.info6205.repository.Maze;
+import neu.edu.info6205.repository.Robot;
 
 import java.util.ArrayList;
 
-public class Robot {
+public class RobotImpl implements Robot {
     private enum Direction {NORTH, EAST, SOUTH, WEST};
 
     private int xPosition;
@@ -18,7 +19,7 @@ public class Robot {
     private ArrayList<int[]> route;
 
 
-    public Robot(int[] sensorActions, Maze maze, int maxMoves){
+    public RobotImpl(int[] sensorActions, Maze maze, int maxMoves){
         this.sensorActions = this.calcSensorActions(sensorActions);
         this.maze = maze;
         int startPos[] = this.maze.getStartPosition();
