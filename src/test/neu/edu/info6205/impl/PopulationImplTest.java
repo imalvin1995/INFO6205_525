@@ -23,10 +23,19 @@ class PopulationImplTest {
     }
 
     @Test
+    void size() {
+    }
+
+    @Test
     void setIndividual() {
     }
 
     @Test
     void getIndividual() {
+    }
+
+
+    @Test
+    void shuffle() {
     }
 }
