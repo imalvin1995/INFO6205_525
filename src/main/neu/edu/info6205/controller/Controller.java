@@ -1,6 +1,9 @@
 package neu.edu.info6205.controller;
 
+import java.io.File;
 import java.util.List;
+import java.util.Scanner;
+
 import neu.edu.info6205.helper.MazeGen;
 import neu.edu.info6205.repository.GeneticAlgorithm;
 import neu.edu.info6205.repository.Maze;
@@ -14,9 +17,23 @@ public class Controller {
     public static int maxGenerations = 1000;
 
     public static void demo() {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Please input the Maze file name");
+        String filename = s.next();
+        if (filename.isEmpty())
+            return;
+        File file= new File("Maze/"+filename+".txt");
+//        System.out.println(file+"");
 
+         if (file.exists())
+             System.out.println("Processing");
+         else {
+             System.out.println("Not Found");
+             return;
+         }
         // read maze
-        Maze maze = MazeGen.readMaze("Maze4");
+        Maze maze = MazeGen.readMaze(filename);
+
 
         // Create genetic algorithm
         GeneticAlgorithm ga = new GeneticAlgorithmImpl(200, 0.05, 0.90, 2, 10);
