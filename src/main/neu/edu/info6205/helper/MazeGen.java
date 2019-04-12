@@ -12,7 +12,7 @@ import java.util.List;
 public class MazeGen {
 
     public static Maze readMaze(String name){
-        int [][] m = parse("Maze/"+name+".txt");
+        int [][] m = parse("maze/"+name+".txt");
         Maze maze = new MazeImpl(m);
         return maze;
     }
