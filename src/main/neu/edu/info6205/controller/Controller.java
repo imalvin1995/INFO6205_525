@@ -16,10 +16,10 @@ public class Controller {
     public static void demo() {
 
         // read maze
-        Maze maze = MazeGen.readMaze("Maze2");
+        Maze maze = MazeGen.readMaze("Maze4");
 
         // Create genetic algorithm
-        GeneticAlgorithm ga = new GeneticAlgorithmImpl(200, 0.05, 0.95, 2, 10);
+        GeneticAlgorithm ga = new GeneticAlgorithmImpl(200, 0.05, 0.90, 2, 10);
         Population population = ga.initPopulation(128);
         ga.evalPopulation(population, maze);
         // Keep track of current generation
