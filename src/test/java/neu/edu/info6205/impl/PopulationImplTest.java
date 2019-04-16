@@ -72,5 +72,31 @@ class PopulationImplTest {
 
     @Test
     void shuffle() {
+        Population p = new PopulationImpl(20);
+        p.setIndividual(0,new IndividualImpl(123));
+        p.setIndividual(1,new IndividualImpl(123));
+        p.setIndividual(2,new IndividualImpl(123));
+        p.setIndividual(3,new IndividualImpl(123));
+        p.setIndividual(4,new IndividualImpl(123));
+        p.setIndividual(5,new IndividualImpl(123));
+        p.setIndividual(6,new IndividualImpl(123));
+        p.setIndividual(7,new IndividualImpl(123));
+        p.setIndividual(8,new IndividualImpl(123));
+        p.setIndividual(9,new IndividualImpl(123));
+        p.setIndividual(10,new IndividualImpl(123));
+        p.setIndividual(11,new IndividualImpl(123));
+        p.setIndividual(12,new IndividualImpl(123));
+        p.setIndividual(13,new IndividualImpl(123));
+        p.setIndividual(14,new IndividualImpl(123));
+        p.setIndividual(15,new IndividualImpl(123));
+        p.setIndividual(16,new IndividualImpl(123));
+        p.setIndividual(17,new IndividualImpl(123));
+        p.setIndividual(18,new IndividualImpl(123));
+        p.setIndividual(19,new IndividualImpl(123));
+
+        String s = Arrays.toString(p.getIndividuals());
+        p.shuffle();
+        String s1 = Arrays.toString(p.getIndividuals());
+        assertNotEquals(s,s1);
     }
 }
