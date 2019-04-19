@@ -18,10 +18,10 @@ public class Controller {
 
     public static void demo() {
         Scanner s = new Scanner(System.in);
-        System.out.println("Please input the Maze file name");
-        String filename = s.next();
+        System.out.println("Please Input the Maze File Name (Maze1, Maze2, Maze3 or Maze4).\nIf You Want to Run the Default One, Press Enter.");
+        String filename = s.nextLine();
         if (filename.isEmpty())
-            return;
+            filename = "Maze1";
         File file= new File("Maze/"+filename+".txt");
 //        System.out.println(file+"");
 
